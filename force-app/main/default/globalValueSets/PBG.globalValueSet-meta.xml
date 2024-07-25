@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>MLCC</fullName>
+        <default>false</default>
+        <label>MLCC</label>
+    </customValue>
+    <customValue>
+        <fullName>SENSOR</fullName>
+        <default>false</default>
+        <label>SENSOR</label>
+    </customValue>
+    <customValue>
+        <fullName>TFE</fullName>
+        <default>false</default>
+        <label>TFE</label>
+    </customValue>
+    <customValue>
+        <fullName>OTHER</fullName>
+        <default>false</default>
+        <label>OTHER</label>
+    </customValue>
+    <masterLabel>PBG</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

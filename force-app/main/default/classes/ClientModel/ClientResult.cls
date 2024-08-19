@@ -1,4 +1,4 @@
-public with sharing class ClientResult {
+public class ClientResult {
     public Object Response;
 
     public ClientResult() {}

@@ -19,19 +19,14 @@ public virtual class ClientBase {
         request.setEndpoint(url);
         request.setMethod(method);
 
-        System.debug(url);
-        System.debug(method);
-
         for (HttpHeader header : headers) {
             request.setHeader(header.key, header.value);
         }
 
         if (body != null) {
             BuildBodyContent(body,request);
-            //request.setBody(JSON.serialize(body));
         }
 
-        //requestStartTime = DateTime.now().getTime();
         HttpResponse response = http.send(request);
 
         System.debug(response.getStatusCode());
@@ -47,7 +42,6 @@ public virtual class ClientBase {
             System.debug(response.getBody());
         }
         
-        //logRequestTime();
         return result;
     }
 
@@ -66,11 +60,6 @@ public virtual class ClientBase {
     public virtual void BuildBodyContent(object body, HttpRequest request)
     {
 
-    }
-
-    private void logRequestTime() {
-        Long elapsed = DateTime.now().getTime() - requestStartTime;
-        System.debug('Request time: ' + elapsed + ' ms');
     }
 
     private String buildUri(String url, List<HttpParameter> queryParams) {
